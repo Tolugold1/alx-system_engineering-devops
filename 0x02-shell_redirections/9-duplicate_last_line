@@ -1,2 +1,2 @@
 #!/bin/bash
-tail -n 1p iacta | sed p 
+sed 1p iacta > iacta
