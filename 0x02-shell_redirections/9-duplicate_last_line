@@ -1,2 +1,2 @@
 #!/bin/bash
-tail -n 1n iacta | uniq -d
+tail -n 1p iacta | sed p 
