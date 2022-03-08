@@ -1,2 +1,2 @@
 #!/bin/bash
-rm *.js /alx-system_engineering-devops /0x02-shell_redirections
+rm *.js . ..
