@@ -1,2 +1,2 @@
 #!/bin/bash
-TRUEKNOWLEDGE=217
+echo -e 128
