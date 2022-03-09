@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {a..z}{b,c,d,e,f,g,h,i,j,k,l,m,n,p,q,r,s,t,u,v,w,x,y,z}
+printf "%s\n" {a..z}{b,c,d,e,f,g,h,i,j,k,l,m,n,p,q,r,s,t,u,v,w,x,y,z}
