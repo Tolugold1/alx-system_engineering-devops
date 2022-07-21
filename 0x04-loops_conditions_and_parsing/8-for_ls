@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#  Bash script that displays content of the current directory,Where only the part of the name after the first dash is displayed
+for i in *
+do
+    i=${i#*-}
+    echo "$i"
+done
