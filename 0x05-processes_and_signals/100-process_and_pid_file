@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Script that creat a file and display some information concerning some signals
+sudo bash -c "echo $$ > /var/run/myscript.pid"
+while true
+do
+    echo "To infinity and beyond"
+    trap 'echo "I hate the kill command"; sudo bash -c "rm /var/run/myscript.pid"; exit' SIGTERM
+    trap 'echo "Y U no love me?!"' SIGINT
+    trap 'sudo bash -c "rm /var/run/myscript.pid"; exit' SIGQUIT
+done
