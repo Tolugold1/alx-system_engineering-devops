@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# changing my home ip
+cp /etc/hosts ~/hosts1.new
+echo "127.0.0.2 localhost" > ~/hosts1.new
+echo "8.8.8.8 facebook.com" >> ~/hosts1.new
+cp -f ~/hosts1.new /etc/hosts
+cat ~/hosts1.new >> /etc/hosts
