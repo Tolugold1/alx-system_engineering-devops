@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# display all ipv4 address presnt on my machine
+ifconfig | awk '/inet addr/{print substr(,6)}'
