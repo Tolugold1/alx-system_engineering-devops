@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install nginx on your web-01 server
+# Configure Nginx so that its HTTP response contains a custom header (on web-01 and web-02)
 apt-get -y update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
