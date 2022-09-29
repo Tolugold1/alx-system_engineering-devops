@@ -3,7 +3,7 @@
 apt-get -y install software-properties-common
 add-apt-repository -y ppa:vbernat/haproxy-1.5
 apt-get -y update
-apt-get install haproxy=2.4.\*
+apt-get install haproxy=2.6.0
 echo "backend web-backend
 balance roundrobin
 server 6270-web-01 3.239.86.158:80 check
