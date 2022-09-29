@@ -6,8 +6,8 @@ apt-get -y update
 apt-get -y install haproxy=1.5.\*
 echo "backend web-backend
 balance roundrobin
-server 6270-web-01 18.208.126.59:80 check
-server 6270-web-02 3.236.221.127:80 check
+server 6270-web-01 3.239.86.158:80 check
+server 6270-web-02 34.239.166.29:80 check
 frontend http
 bind *:80
 mode http
