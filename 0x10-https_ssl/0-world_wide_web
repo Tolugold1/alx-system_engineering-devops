@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 # Bash script that will display information about subdomains
-if [ '$#' -eq 2 ]; then
-    printf "The subdomain $2 is a "
-    dig +nocmd "$2.$1" +noall +answer | awk '{printf $4}'
-    printf "record and points to "
-    dig "$2.$1" +short
-elif [ '$#' -eq 1 ]; then
+if [ '$#' -eq 1 ]; then
     printf "The subdomain www is a "
     dig +nocmd www."$1" +noall +answer | awk '{printf $4}'
     printf "record and points to "
@@ -22,4 +17,9 @@ elif [ '$#' -eq 1 ]; then
     dig +nocmd web-02."$1 "+noall +answer | awk '{printf $4}'
     printf "record and points to "
     dig web-02."$1" +short
+elif [ '$#' -eq 2 ]; then
+    printf "The subdomain $2 is a "
+    dig +nocmd "$2.$1" +noall +answer | awk '{printf $4}'
+    printf "record and points to "
+    dig "$2.$1" +short
 fi
