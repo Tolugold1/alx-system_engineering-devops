@@ -34,13 +34,11 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 
 backend web-backend
-balance roundrobin
-server 6270-web-01 3.239.86.158:80 check
-server 6270-web-02 34.239.166.29:80 check
-frontend http
-bind *:80
-mode http
-default_backend web-backend
+        balance roundrobin
+        redirect scheme https if !{ ssl_fc }
+        server 6270-web-01 3.239.86.158:80 check
+        server 6270-web-02 34.239.166.29:80 check
+
 
 frontend http
         bind *:80
