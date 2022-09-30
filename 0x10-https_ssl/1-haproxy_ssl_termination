@@ -45,7 +45,7 @@ frontend http
         reqadd X-Forwarded-Proto:\ http
         default_backend web-backend
 
-frontend http
+frontend https
         bind *:443 ssl crt /etc/haproxy/certs/www.tolugold.tech.pem
         reqadd X-Forwarded-Proto:\ https
         default_backend web-backend
