@@ -8,13 +8,13 @@ if __name__ == '__main__':
     import csv
 
 
-    Name = requests.get("https://jsonplaceholder.typicode.com/users/{}".
+    N = requests.get("https://jsonplaceholder.typicode.com/users/{}".
                         format(argv[1]))
 
-    Value = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".
+    V = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".
                             format(argv[1]))
-    username = Name.json().get("username")
-    info = Value.json()
+    username = N.json().get("username")
+    info = V.json()
     
     with open("{}.csv".format(argv[1]), "w") as csv_file:
         writer = csv.writer(csv_file, delimiter=',', quotechar='"',
