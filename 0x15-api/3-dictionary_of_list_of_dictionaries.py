@@ -21,9 +21,9 @@ if __name__ == '__main__':
         info = V.json()
 
         
-        json_file['{}'.format(id)] = []
+        json_file['{}'.format(uid)] = []
         for task in info:
-            json_file['{}'.format(id)].append({
+            json_file['{}'.format(uid)].append({
                 'username': name,
                 'task': task.get('title'),
                 'completed': task.get('completed')
