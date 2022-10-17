@@ -17,7 +17,8 @@ if __name__ == '__main__':
     info = urlValue.json()
     
     with open("{}.csv".format(argv[1]), "w") as csv_file:
-        writer = csv.writer(csv_file)
+        writer = csv.writer(csv_file, delimiter=',', quotechar='"',
+                                quoting=csv.QUOTE_ALL)
 
         for task in info:
             writer.writerow([argv[1], username, task.get("completed"), 
