@@ -21,12 +21,9 @@ if __name__ == '__main__':
         total_no_of_task += 1
         if task.get('completed'):
             number_of_completed_tasks += 1
-
-    header = ["USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"]
     
     with open("{}.csv".format(argv[1]), "w") as csv_file:
         writer = csv.writer(csv_file)
 
-        writer.writerow(header)
         for task in info:
             writer.writerow([argv[1], name, task.get("completed"), task.get("title")])
