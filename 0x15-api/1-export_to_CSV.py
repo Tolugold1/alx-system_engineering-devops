@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     urlValue = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".
                             format(argv[1]))
-    username = urlName.json().get("name")
+    username = urlName.json().get("username")
     info = urlValue.json()
     
     with open("{}.csv".format(argv[1]), "w") as csv_file:
