@@ -12,7 +12,6 @@ if __name__ == '__main__':
     urlValue = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".
                             format(argv[1]))
     info = urlValue.json()
-
     total_no_of_task = 0
     number_of_completed_tasks = 0
     for task in info:
