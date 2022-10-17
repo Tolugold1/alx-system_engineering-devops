@@ -8,7 +8,7 @@ if __name__ == '__main__':
     import json
 
     id = set()
-    post = requests.get("https://jsonplaceholder.typicode.com/post")
+    post = requests.get("https://jsonplaceholder.typicode.com/posts")
     p_Data = post.json()
     for i in p_Data:
         id.add(i.get("userId"))
