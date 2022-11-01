@@ -6,12 +6,14 @@ import requests
 
 
 def number_of_subscribers(subreddit):
-    r = requests.get('https://www.reddit.com/r/{}/hot.json?limit=10'.
+    """ prints the titles of the first 10 hot 
+    posts listed for a given subreddit"""
+    try:
+        r = requests.get('https://www.reddit.com/r/{}/hot.json?limit=10'.
                          format(subreddit),
                          headers={'User-Agent': 'custom'},
                          allow_redirects=False)
-    if (r):
         for title in r.json().get('data').get('children'):
             print(title.get('data').get("title"))
-    else:
+    except:
         print(None)
