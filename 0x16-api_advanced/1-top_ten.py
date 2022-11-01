@@ -13,7 +13,7 @@ def number_of_subscribers(subreddit):
                          format(subreddit),
                          headers={'User-Agent': 'custom'},
                          allow_redirects=False)
-        for title in r.json().get('data').get('children'):
-            print(title.get('data').get("title"))
+        for t in r.json().get('data').get('children'):
+            print(t.get('data').get("title"))
     except:
-        print(None)
+        print('None')
